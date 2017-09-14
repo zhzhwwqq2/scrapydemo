@@ -12,7 +12,7 @@ class ScrapydemoPipeline(object):
         for i in range(0, len(item['title'])):
             print('第' + str(i + 1) + '篇文章：')
             print(item['title'][i])
-            print(item['detail'][i])
+            print(item['detail'][i].replace(u'\xa0 ', u' '))
             print(item['link'][i])
             print('---------')
         return item
